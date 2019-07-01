@@ -1,0 +1,18 @@
+@import "theme/PostsPage";
+@import "theme/TopNavigation";
+@import "theme/Footer";
+@import "theme/HomePage";
+@import "theme/App";
+@import "theme/PostDetail";
+
+body  {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+h1, h2, p, span, a {
+  font-weight: normal;
+  font-family: Prime, sans-serif;
+  font-style: italic;
+}

@@ -1,0 +1,41 @@
+@keyframes to-right {
+  from {
+    opacity: 0;
+    margin-left: -500px;
+  }
+  to {
+    opacity: 1;
+    margin-left: -50;
+  }
+}
+
+.containerPostDetail {
+  margin: 100px auto;
+  padding: 10px;
+  max-width: 600px;
+  text-align: left;
+  box-shadow: 0 5px 10px grey;
+  border-radius: 20px;
+  display: flex;
+  //img {
+  //  margin: -50px 20px 0 -50px;
+  //  width: 200px;
+  //  height: 300px;
+  //  border-radius: 20px;
+  //  animation: to-right 0.5s ease-out alternate;
+  //  z-index: 100;
+  //}
+  .containerWithDetail {
+    width: 100%;
+    animation: none;
+    p {
+      font-size: 20px;
+    }
+    h1 {
+      color: #db0031;
+      span {
+        color: #000;
+      }
+    }
+  }
+}

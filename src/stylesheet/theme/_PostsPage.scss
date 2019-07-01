@@ -1,0 +1,29 @@
+.containerPostPageDetail {
+  margin: auto auto 50px auto;
+  padding: 10px;
+  max-width: 1400px;
+  min-height: 100vh;
+  box-shadow: 0 5px 10px grey;
+  border-radius: 10px;
+  .ulContainer {
+    margin: auto;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .liContainer {
+      margin: 10px;
+      padding: 10px;
+      width: 50%;
+      max-width: 650px;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px grey;
+    }
+  }
+}
