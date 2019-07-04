@@ -14,7 +14,6 @@ function PostPage() {
       'https://jsonplaceholder.typicode.com/posts'
     );
     const items = await data.json();
-    // console.log(items);
 
     setItems(items);
   };

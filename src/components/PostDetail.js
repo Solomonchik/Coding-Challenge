@@ -1,56 +1,53 @@
 import React, { useEffect, useState } from 'react';
+import faker from 'faker'
 
 function PostDetail({match}) {
 
   useEffect(()=> {
-    fetchPost();
+    fetchItem();
+    // fetchUsers();
+    fetchUser();
     // console.log(match)
   }, []);
 
   const [item, setItem] = useState({});
+  const root = 'https://jsonplaceholder.typicode.com/posts/';
 
-  const fetchPost = async () => {
-    const fetchPost = await fetch(
-      `https://jsonplaceholder.typicode.com/posts/${match.params.userId}`
+  const fetchItem = async () => {
+    const fetchItem = await fetch(
+      root + match.params.userId
     );
-    const item = await fetchPost.json();
+    const item = await fetchItem.json();
     // console.log(item);
     setItem(item);
   };
 
-  const nameArray = [
-    'Ehtel Tao',
-    'Bernardo Trapp',
-    'Hilario Groth',
-    'Teri Sane',
-    'Mason Burks',
-    'Marissa Jone',
-    'Granville Heyd',
-    'Shea Kingsley',
-    'Stewart Merrigan',
-    'Odelia Duford',
-    'Kent Tong',
-    'Cecille Naylor',
-    'Layne Howse',
-    'Georgann Locher',
-    'Fatima Fedor',
-    'Myesha Height',
-    'Elidia Sharpton',
-    'Sook Blackmer',
-    'Emmett Henslee',
-    'Mazie Nail'];
-  const oneImageFromArray = nameArray[Math.floor(Math.random()*nameArray.length)];
+
+  const [user, setUser] = useState({});
+
+  const fetchUser =  async () => {
+    const fetchUser = await fetch(
+      `https://jsonplaceholder.typicode.com/users/${Math.floor(Math.random()*10)}`
+    );
+
+    const user = await fetchUser.json();
+
+    setUser(user);
+  };
+  console.log('1st console log with users', user);
+
+
 
   return (
    <div>
      <div className="containerPostDetail">
+       <img src={faker.image.avatar()} alt=""/>
        <div className="containerWithDetail">
-         <h1>Author: <span>{oneImageFromArray}</span></h1>
+         <h1>Author: <span>{user.name}</span></h1>
+         {/*<h1>Author: <span>{oneNameFromArray}</span></h1>*/}
          <h1>Title:</h1><p>{item.title}</p>
          <h1>Description:</h1>
-         <p>{item.body + ' '} <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Ad adipisci beatae consectetur culpa doloremque, dolores, doloribus eos facere harum
-          ipsa ipsam magnam minus omnis optio placeat similique tenetur unde velit.</span></p>
+         <p>{item.body + ' '} </p>
        </div>
      </div>
    </div>

@@ -17,14 +17,14 @@
   box-shadow: 0 5px 10px grey;
   border-radius: 20px;
   display: flex;
-  //img {
-  //  margin: -50px 20px 0 -50px;
-  //  width: 200px;
-  //  height: 300px;
-  //  border-radius: 20px;
-  //  animation: to-right 0.5s ease-out alternate;
-  //  z-index: 100;
-  //}
+  img {
+    margin: -50px 20px 0 -50px;
+    width: 200px;
+    height: 300px;
+    border-radius: 20px;
+    animation: to-right 0.5s ease-out alternate;
+    z-index: 100;
+  }
   .containerWithDetail {
     width: 100%;
     animation: none;
